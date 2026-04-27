@@ -21,3 +21,5 @@
 
 	using CharType = char;
 #endif
+
+#define ROLKY_UNMANAGED_CALLERS_ONLY ((const CharType*)-1)

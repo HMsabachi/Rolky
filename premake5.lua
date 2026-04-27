@@ -1,4 +1,4 @@
-workspace "Rolky"
+﻿workspace "Rolky"
     configurations { "Debug", "Release" }
 
     targetdir "%{wks.location}/Build/%{cfg.buildcfg}"
@@ -6,4 +6,6 @@ workspace "Rolky"
 
 include "Rolky.Native"
 include "Rolky.Managed"
+
 include "Testing"
+include "Testing.Managed"

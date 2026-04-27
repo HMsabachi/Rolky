@@ -16,28 +16,41 @@ namespace Rolky {
 		ErrorCallbackFn ErrorCallback = nullptr;
 	};
 
-	struct InternalCallInfo
-	{
-		const CharType* MethodName;
-		void* NativeFuncPtr;
-	};
 
 	class HostInstance
 	{
 	public:
 		void Initialize(HostSettings InSettings);
-
 		void AddInternalCall(const CharType* InMethodName, void* InFunctionPtr);
 
+		void UploadInternalCalls();
+
 	private:
-		void LoadFunctions() const;
-		void InitializeRolkyManaged() const;
+		void LoadHostFXR() const;
+		void InitializeRolkyManaged();
+
+		void* LoadRolkyManagedFunctionPtr(const std::filesystem::path& InAssemblyPath, const CharType* InTypeName, const CharType* InMethodName, const CharType* InDelegateType = ROLKY_UNMANAGED_CALLERS_ONLY) const;
+
+		template <typename TFunc>
+		TFunc LoadRolkyManagedFunctionPtr(const CharType* InTypeName, const CharType* InMethodName, const CharType* InDelegateType = ROLKY_UNMANAGED_CALLERS_ONLY) const
+		{
+			return (TFunc)LoadRolkyManagedFunctionPtr(m_RolkyManagedAssemblyPath, InTypeName, InMethodName, InDelegateType);
+		}
+
+	public:
+		struct InternalCall
+		{
+			const CharType* Name;
+			void* NativeFunctionPtr;
+		};
 
 	private:
 		HostSettings m_Settings;
+		std::filesystem::path m_RolkyManagedAssemblyPath;
+		void* m_HostFXRContext = nullptr;
 		bool m_Initialized = false;
 
-		std::vector<InternalCallInfo> m_InternalCalls;
+		std::vector<InternalCall*> m_InternalCalls;
 	};
 
 }

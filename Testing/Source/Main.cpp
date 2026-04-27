@@ -5,6 +5,12 @@
 
 #include <Rolky/HostInstance.hpp>
 
+
+void Dummy()
+{
+	std::cout << "Dummy!" << std::endl;
+}
+
 int main()
 {
 #ifdef ROLKY_TESTING_DEBUG
@@ -19,5 +25,9 @@ int main()
 	};
 	Rolky::HostInstance hostInstance;
 	hostInstance.Initialize(settings);
+
+	hostInstance.AddInternalCall(ROLKY_STR("Test1"), &Dummy);
+	hostInstance.AddInternalCall(ROLKY_STR("Test2"), &Dummy);
+	hostInstance.UploadInternalCalls();
 	return 0;
 }

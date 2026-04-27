@@ -1,10 +1,9 @@
 ﻿include "../Premake/CSExtensions.lua"
 
-project "Rolky.Managed"
+project "Testing.Managed"
     language "C#"
-    dotnetframework "net9.0"
+    dotnetframework "net7.0"
     kind "SharedLib"
-    clr "Unsafe"
 
     -- Don't specify architecture here. (see https://github.com/premake/premake-core/issues/1758)
 
@@ -13,3 +12,5 @@ project "Rolky.Managed"
     files {
         "Source/**.cs"
     }
+
+    links { "Rolky.Managed" }
