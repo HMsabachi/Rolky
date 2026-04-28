@@ -1,0 +1,7 @@
+﻿  Main.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\ranges(11): warning STL4038: The contents of <ranges> are available only with C++20 or later.
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\HostInstance.hpp(53,165): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
+  (编译源文件“Source/Main.cpp”)
+  
+  LINK : 没有找到 E:\PrismEngine\Rolky\x64\Debug\Example.Native.exe 或上一个增量链接没有生成它；正在执行完全链接
+  Example.Native.vcxproj -> E:\PrismEngine\Rolky\x64\Debug\Example.Native.exe

@@ -2,6 +2,7 @@
 
 #include <iostream>
 
+#include <cstring>
 #include <string>
 
 #include <vector>
@@ -9,9 +10,11 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <map>
+#include <optional>
 #include <set>
 
 #ifdef _WIN32
+	#define NOMINMAX
 	#include <Windows.h>
 #endif
 
@@ -19,7 +22,9 @@
 
 #include <functional>
 
+#include <utility>
+
 // HostFXR / CoreCLR
-#include <nethost.h>
+//#include <nethost.h>
 #include <coreclr_delegates.h>
 #include <hostfxr.h>

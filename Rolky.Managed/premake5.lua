@@ -1,15 +1,39 @@
-﻿include "../Premake/CSExtensions.lua"
+﻿project "Rolky.Managed"
+    filter { "not action:vs*", "not system:windows" }
+        kind "StaticLib"
+		-- Mach-y AR requires a non-empty file list for archive creation
+		files { "Source/Dummy.cpp" }
 
-project "Rolky.Managed"
-    language "C#"
-    dotnetframework "net9.0"
-    kind "SharedLib"
-    clr "Unsafe"
+    filter { "action:vs* or system:windows" }
+        language "C#"
+        dotnetframework "net9.0"
+        kind "SharedLib"
+        clr "Unsafe"
+        targetdir("../Build/%{cfg.buildcfg}")
+        objdir("../Intermediates/%{cfg.buildcfg}")
+        dependson { "Rolky.Generator" }
 
-    -- Don't specify architecture here. (see https://github.com/premake/premake-core/issues/1758)
+		--nuget {
+		--	"Microsoft.Build:17.12.6",
+		--	"Microsoft.Build.Framework:17.12.6",
+		--	"Microsoft.Build.Runtime:17.12.6",
+		--	"Microsoft.Build.Utilities.Core:17.12.6",
+		--	"Microsoft.Build.Tasks.Core:17.12.6"
+		--}
 
-    propertytags { { "AppendTargetFrameworkToOutputPath", "false" } }
+		-- Don't specify architecture here. (see https://github.com/premake/premake-core/issues/1758)
 
-    files {
-        "Source/**.cs"
-    }
+		vsprops {
+			AppendTargetFrameworkToOutputPath = "false",
+			Nullable = "enable",
+			CopyLocalLockFileAssemblies = "true",
+			EnableDynamicLoading = "true",
+		}
+
+        disablewarnings {
+            "CS8500"
+        }
+
+        files {
+            "Source/**.cs"
+        }

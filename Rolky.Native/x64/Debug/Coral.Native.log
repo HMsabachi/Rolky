@@ -1,0 +1,206 @@
+﻿  CoralPCH.cpp
+  Assembly.cpp
+E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10): warning C4005: “CORAL_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Coral/Assembly.cpp”)
+      E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10):
+      之前在命令行上声明的“CORAL_WINDOWS”
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\HostInstance.hpp(53,165): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
+  (编译源文件“/Source/Coral/Assembly.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Assembly.cpp(39,16): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/Assembly.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Assembly.cpp(39,33): warning C4996: 'Coral::TypeCache::GetTypeByName': Global type cache has been superseded by Assembly/ALC-local type APIs. See `ManagedAssembly::GetLocalType`
+  (编译源文件“/Source/Coral/Assembly.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Assembly.cpp(96,30): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/Assembly.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Assembly.cpp(96,47): warning C4996: 'Coral::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/Assembly.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Assembly.cpp(131,30): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/Assembly.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Assembly.cpp(131,47): warning C4996: 'Coral::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/Assembly.cpp”)
+  
+  Attribute.cpp
+E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10): warning C4005: “CORAL_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Coral/Attribute.cpp”)
+      E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10):
+      之前在命令行上声明的“CORAL_WINDOWS”
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Attribute.cpp(16,13): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/Attribute.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Attribute.cpp(16,30): warning C4996: 'Coral::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/Attribute.cpp”)
+  
+  DotnetServices.cpp
+E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10): warning C4005: “CORAL_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Coral/DotnetServices.cpp”)
+      E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10):
+      之前在命令行上声明的“CORAL_WINDOWS”
+  
+  FieldInfo.cpp
+E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10): warning C4005: “CORAL_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Coral/FieldInfo.cpp”)
+      E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10):
+      之前在命令行上声明的“CORAL_WINDOWS”
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\FieldInfo.cpp(21,13): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/FieldInfo.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\FieldInfo.cpp(21,30): warning C4996: 'Coral::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/FieldInfo.cpp”)
+  
+  GC.cpp
+E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10): warning C4005: “CORAL_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Coral/GC.cpp”)
+      E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10):
+      之前在命令行上声明的“CORAL_WINDOWS”
+  
+  HostInstance.cpp
+E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10): warning C4005: “CORAL_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Coral/HostInstance.cpp”)
+      E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10):
+      之前在命令行上声明的“CORAL_WINDOWS”
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\HostInstance.hpp(53,165): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
+  (编译源文件“/Source/Coral/HostInstance.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\HostInstance.hpp(56,122): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
+  (编译源文件“/Source/Coral/HostInstance.cpp”)
+      E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\HostInstance.hpp(56,122):
+      模板实例化上下文(最早的实例化上下文)为
+          E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\HostInstance.cpp(272,69):
+          查看 "TFunc Coral::HostInstance::LoadCoralManagedFunctionPtr<Coral::HostInstance::InitializeCoralManaged::InitializeFn>(const Coral::UCChar *,const Coral::UCChar *,const Coral::UCChar *) const" 所需的默认参数表达式的实例化处理
+          with
+          [
+              TFunc=Coral::HostInstance::InitializeCoralManaged::InitializeFn
+          ]
+  
+  ManagedObject.cpp
+E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10): warning C4005: “CORAL_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Coral/ManagedObject.cpp”)
+      E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10):
+      之前在命令行上声明的“CORAL_WINDOWS”
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\ManagedObject.cpp(112,13): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/ManagedObject.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\ManagedObject.cpp(112,30): warning C4996: 'Coral::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/ManagedObject.cpp”)
+  
+  Memory.cpp
+E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10): warning C4005: “CORAL_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Coral/Memory.cpp”)
+      E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10):
+      之前在命令行上声明的“CORAL_WINDOWS”
+  
+  MethodInfo.cpp
+E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10): warning C4005: “CORAL_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Coral/MethodInfo.cpp”)
+      E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10):
+      之前在命令行上声明的“CORAL_WINDOWS”
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\MethodInfo.cpp(21,19): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/MethodInfo.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\MethodInfo.cpp(21,36): warning C4996: 'Coral::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/MethodInfo.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\MethodInfo.cpp(43,27): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/MethodInfo.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\MethodInfo.cpp(43,44): warning C4996: 'Coral::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/MethodInfo.cpp”)
+  
+  PropertyInfo.cpp
+E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10): warning C4005: “CORAL_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Coral/PropertyInfo.cpp”)
+      E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10):
+      之前在命令行上声明的“CORAL_WINDOWS”
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\PropertyInfo.cpp(21,13): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/PropertyInfo.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\PropertyInfo.cpp(21,30): warning C4996: 'Coral::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/PropertyInfo.cpp”)
+  
+  String.cpp
+E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10): warning C4005: “CORAL_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Coral/String.cpp”)
+      E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10):
+      之前在命令行上声明的“CORAL_WINDOWS”
+  
+  StringHelper.cpp
+E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10): warning C4005: “CORAL_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Coral/StringHelper.cpp”)
+      E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10):
+      之前在命令行上声明的“CORAL_WINDOWS”
+  
+  Type.cpp
+E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10): warning C4005: “CORAL_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Coral/Type.cpp”)
+      E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10):
+      之前在命令行上声明的“CORAL_WINDOWS”
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Type.cpp(25,17): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/Type.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Type.cpp(25,34): warning C4996: 'Coral::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/Type.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Type.cpp(49,36): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/Type.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Type.cpp(49,53): warning C4996: 'Coral::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/Type.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Type.cpp(153,20): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/Type.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Type.cpp(153,37): warning C4996: 'Coral::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/Type.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Type.cpp(191,18): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/Type.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Type.cpp(197,13): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/Type.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Type.cpp(191,35): warning C4996: 'Coral::TypeCache::GetTypeByID': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/Type.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\Type.cpp(197,30): warning C4996: 'Coral::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/Type.cpp”)
+  
+  TypeCache.cpp
+E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10): warning C4005: “CORAL_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Coral/TypeCache.cpp”)
+      E:\PrismEngine\Reference\Coral\Coral.Native\Include\Coral\Core.hpp(18,10):
+      之前在命令行上声明的“CORAL_WINDOWS”
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\TypeCache.cpp(6,2): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/TypeCache.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\TypeCache.cpp(6,13): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/TypeCache.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\TypeCache.cpp(8,20): warning C4996: 'Coral::TypeCache::~TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/TypeCache.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\TypeCache.cpp(12,8): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/TypeCache.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\TypeCache.cpp(20,8): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/TypeCache.cpp”)
+  
+E:\PrismEngine\Reference\Coral\Coral.Native\Source\Coral\TypeCache.cpp(27,8): warning C4996: 'Coral::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Coral/TypeCache.cpp”)
+  
+  正在生成代码...
+  Coral.Native.vcxproj -> E:\PrismEngine\Reference\Coral\x64\Debug\Coral.Native.lib

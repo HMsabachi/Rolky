@@ -1,6 +1,7 @@
 ﻿#pragma once
-namespace Rolky 
-{
+
+namespace Rolky {
+
 	enum StatusCode
 	{
 		// Success

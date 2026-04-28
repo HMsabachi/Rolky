@@ -1,0 +1,207 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: 中间目录(x64\Debug\)包含从另一个项目(Coral.Native.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  RolkyPCH.cpp
+  Assembly.cpp
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10): warning C4005: “ROLKY_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Rolky/Assembly.cpp”)
+      E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10):
+      之前在命令行上声明的“ROLKY_WINDOWS”
+  
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\HostInstance.hpp(53,165): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
+  (编译源文件“/Source/Rolky/Assembly.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Assembly.cpp(39,16): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/Assembly.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Assembly.cpp(39,33): warning C4996: 'Rolky::TypeCache::GetTypeByName': Global type cache has been superseded by Assembly/ALC-local type APIs. See `ManagedAssembly::GetLocalType`
+  (编译源文件“/Source/Rolky/Assembly.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Assembly.cpp(96,30): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/Assembly.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Assembly.cpp(96,47): warning C4996: 'Rolky::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/Assembly.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Assembly.cpp(131,30): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/Assembly.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Assembly.cpp(131,47): warning C4996: 'Rolky::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/Assembly.cpp”)
+  
+  Attribute.cpp
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10): warning C4005: “ROLKY_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Rolky/Attribute.cpp”)
+      E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10):
+      之前在命令行上声明的“ROLKY_WINDOWS”
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Attribute.cpp(16,13): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/Attribute.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Attribute.cpp(16,30): warning C4996: 'Rolky::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/Attribute.cpp”)
+  
+  DotnetServices.cpp
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10): warning C4005: “ROLKY_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Rolky/DotnetServices.cpp”)
+      E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10):
+      之前在命令行上声明的“ROLKY_WINDOWS”
+  
+  FieldInfo.cpp
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10): warning C4005: “ROLKY_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Rolky/FieldInfo.cpp”)
+      E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10):
+      之前在命令行上声明的“ROLKY_WINDOWS”
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\FieldInfo.cpp(21,13): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/FieldInfo.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\FieldInfo.cpp(21,30): warning C4996: 'Rolky::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/FieldInfo.cpp”)
+  
+  GC.cpp
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10): warning C4005: “ROLKY_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Rolky/GC.cpp”)
+      E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10):
+      之前在命令行上声明的“ROLKY_WINDOWS”
+  
+  HostInstance.cpp
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10): warning C4005: “ROLKY_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Rolky/HostInstance.cpp”)
+      E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10):
+      之前在命令行上声明的“ROLKY_WINDOWS”
+  
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\HostInstance.hpp(53,165): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
+  (编译源文件“/Source/Rolky/HostInstance.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\HostInstance.hpp(56,122): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
+  (编译源文件“/Source/Rolky/HostInstance.cpp”)
+      E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\HostInstance.hpp(56,122):
+      模板实例化上下文(最早的实例化上下文)为
+          E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\HostInstance.cpp(272,69):
+          查看 "TFunc Rolky::HostInstance::LoadRolkyManagedFunctionPtr<Rolky::HostInstance::InitializeRolkyManaged::InitializeFn>(const Rolky::UCChar *,const Rolky::UCChar *,const Rolky::UCChar *) const" 所需的默认参数表达式的实例化处理
+          with
+          [
+              TFunc=Rolky::HostInstance::InitializeRolkyManaged::InitializeFn
+          ]
+  
+  ManagedObject.cpp
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10): warning C4005: “ROLKY_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Rolky/ManagedObject.cpp”)
+      E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10):
+      之前在命令行上声明的“ROLKY_WINDOWS”
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\ManagedObject.cpp(112,13): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/ManagedObject.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\ManagedObject.cpp(112,30): warning C4996: 'Rolky::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/ManagedObject.cpp”)
+  
+  Memory.cpp
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10): warning C4005: “ROLKY_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Rolky/Memory.cpp”)
+      E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10):
+      之前在命令行上声明的“ROLKY_WINDOWS”
+  
+  MethodInfo.cpp
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10): warning C4005: “ROLKY_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Rolky/MethodInfo.cpp”)
+      E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10):
+      之前在命令行上声明的“ROLKY_WINDOWS”
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\MethodInfo.cpp(21,19): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/MethodInfo.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\MethodInfo.cpp(21,36): warning C4996: 'Rolky::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/MethodInfo.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\MethodInfo.cpp(43,27): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/MethodInfo.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\MethodInfo.cpp(43,44): warning C4996: 'Rolky::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/MethodInfo.cpp”)
+  
+  PropertyInfo.cpp
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10): warning C4005: “ROLKY_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Rolky/PropertyInfo.cpp”)
+      E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10):
+      之前在命令行上声明的“ROLKY_WINDOWS”
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\PropertyInfo.cpp(21,13): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/PropertyInfo.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\PropertyInfo.cpp(21,30): warning C4996: 'Rolky::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/PropertyInfo.cpp”)
+  
+  String.cpp
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10): warning C4005: “ROLKY_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Rolky/String.cpp”)
+      E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10):
+      之前在命令行上声明的“ROLKY_WINDOWS”
+  
+  StringHelper.cpp
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10): warning C4005: “ROLKY_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Rolky/StringHelper.cpp”)
+      E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10):
+      之前在命令行上声明的“ROLKY_WINDOWS”
+  
+  Type.cpp
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10): warning C4005: “ROLKY_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Rolky/Type.cpp”)
+      E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10):
+      之前在命令行上声明的“ROLKY_WINDOWS”
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Type.cpp(25,17): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/Type.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Type.cpp(25,34): warning C4996: 'Rolky::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/Type.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Type.cpp(49,36): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/Type.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Type.cpp(49,53): warning C4996: 'Rolky::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/Type.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Type.cpp(153,20): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/Type.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Type.cpp(153,37): warning C4996: 'Rolky::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/Type.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Type.cpp(191,18): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/Type.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Type.cpp(197,13): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/Type.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Type.cpp(191,35): warning C4996: 'Rolky::TypeCache::GetTypeByID': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/Type.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\Type.cpp(197,30): warning C4996: 'Rolky::TypeCache::CacheType': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/Type.cpp”)
+  
+  TypeCache.cpp
+E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10): warning C4005: “ROLKY_WINDOWS”: 宏重定义
+  (编译源文件“/Source/Rolky/TypeCache.cpp”)
+      E:\PrismEngine\Rolky\Rolky.Native\Include\Rolky\Core.hpp(18,10):
+      之前在命令行上声明的“ROLKY_WINDOWS”
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\TypeCache.cpp(6,2): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/TypeCache.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\TypeCache.cpp(6,13): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/TypeCache.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\TypeCache.cpp(8,20): warning C4996: 'Rolky::TypeCache::~TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/TypeCache.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\TypeCache.cpp(12,8): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/TypeCache.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\TypeCache.cpp(20,8): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/TypeCache.cpp”)
+  
+E:\PrismEngine\Rolky\Rolky.Native\Source\Rolky\TypeCache.cpp(27,8): warning C4996: 'Rolky::TypeCache': Global type cache has been superseded by Assembly/ALC-local type APIs
+  (编译源文件“/Source/Rolky/TypeCache.cpp”)
+  
+  正在生成代码...
+  Rolky.Native.vcxproj -> E:\PrismEngine\Rolky\x64\Debug\Rolky.Native.lib

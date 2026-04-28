@@ -89,3 +89,5 @@ SpacesInSquareBrackets: false
 Standard: Auto
 TabWidth: 4
 UseTab: ForIndentation
+
+...

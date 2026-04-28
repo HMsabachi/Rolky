@@ -1,17 +1,25 @@
-﻿local RolkyDotNetPath = os.getenv("ROLKY_DOTNET_PATH")
+﻿include "../Premake/DebuggerTypeExtension.lua"
 
 project "Rolky.Native"
     language "C++"
-    cppdialect "C++20"
+    cppdialect "C++17"
     kind "StaticLib"
+    staticruntime "Off"
+    debuggertype "NativeWithManagedCore"
 
-    -- Can't specify 64-bit architecture in the workspace level since VS 2022 (see https://github.com/premake/premake-core/issues/1758)
-    architecture "x86_64"
+	dependson "Rolky.Managed"
+
+	targetdir("../Build/%{cfg.buildcfg}")
+	objdir("../Intermediates/%{cfg.buildcfg}")
 
     pchheader "RolkyPCH.hpp"
     pchsource "Source/RolkyPCH.cpp"
 
     forceincludes { "RolkyPCH.hpp" }
+
+    filter { "action:xcode4" }
+        pchheader "Source/RolkyPCH.hpp"
+    filter { }
 
     files {
         "Source/**.cpp",
@@ -20,5 +28,24 @@ project "Rolky.Native"
         "Include/Rolky/**.hpp",
     }
 
-    includedirs { "Source/", "Include/Rolky/" }
-    externalincludedirs { RolkyDotNetPath }
+    includedirs { "Source/", "Include/" }
+    externalincludedirs { "../NetCore/" }
+
+    filter { "configurations:Debug" }
+        runtime "Debug"
+        symbols "On"
+    filter { }
+
+    filter { "configurations:Release" }
+        runtime "Release"
+        symbols "Off"
+        optimize "On"
+    filter { }
+
+	filter { "system:windows" }
+		defines { "ROLKY_WINDOWS" }
+    filter { }
+
+	filter { "system:macosx" }
+		defines { "ROLKY_MACOSX" }
+    filter { }
