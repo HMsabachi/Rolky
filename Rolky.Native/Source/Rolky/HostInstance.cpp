@@ -31,6 +31,16 @@ namespace Rolky {
 	using FreeManagedStringFn = void (*)(const CharType*);
 	FreeManagedStringFn FreeManagedString = nullptr;
 
+	struct ObjectCreateInfo
+	{
+		const CharType* TypeName;
+		bool IsWeakRef;
+	};
+	using CreateObjectFn = void* (*)(const ObjectCreateInfo*);
+	CreateObjectFn CreateObject = nullptr;
+	using DestroyObjectFn = void (*)(void*);
+	DestroyObjectFn DestroyObject = nullptr;
+
 	void DefaultErrorCallback(const CharType* InMessage)
 	{
 #if ROLKY_WIDE_CHARS
@@ -94,6 +104,24 @@ namespace Rolky {
 	{
 		UnmanagedArray arr = { m_InternalCalls.data(), (int32_t)m_InternalCalls.size() };
 		SetInternalCalls(&arr);
+	}
+
+
+	ObjectHandle HostInstance::CreateInstance(const CharType* InTypeName)
+	{
+		ObjectCreateInfo createInfo = {
+			.TypeName = InTypeName,
+			.IsWeakRef = false
+		};
+
+		ObjectHandle handle;
+		handle.m_Handle = CreateObject(&createInfo);
+		return handle;
+	}
+	void HostInstance::DestroyInstance(ObjectHandle& InObjectHandle)
+	{
+		DestroyObject(InObjectHandle.m_Handle);
+		InObjectHandle.m_Handle = nullptr;
 	}
 
 #ifdef _WIN32
@@ -169,6 +197,8 @@ namespace Rolky {
 		SetInternalCalls = LoadRolkyManagedFunctionPtr<SetInternalCallsFn>(ROLKY_STR("Rolky.ManagedHost, Rolky.Managed"), ROLKY_STR("SetInternalCalls"));
 		GetString = LoadRolkyManagedFunctionPtr<GetStringFn>(ROLKY_STR("Rolky.ManagedHost, Rolky.Managed"), ROLKY_STR("GetString"));
 		FreeManagedString = LoadRolkyManagedFunctionPtr<FreeManagedStringFn>(ROLKY_STR("Rolky.Interop.UnmanagedString, Rolky.Managed"), ROLKY_STR("Free"));
+		CreateObject = LoadRolkyManagedFunctionPtr<CreateObjectFn>(ROLKY_STR("Rolky.ManagedHost, Rolky.Managed"), ROLKY_STR("CreateObject"));
+		DestroyObject = LoadRolkyManagedFunctionPtr<DestroyObjectFn>(ROLKY_STR("Rolky.ManagedHost, Rolky.Managed"), ROLKY_STR("DestroyObject"));
 		auto msg = GetString();
 		std::wcout << L"Message: " << msg << std::endl;
 		FreeManagedString(msg);

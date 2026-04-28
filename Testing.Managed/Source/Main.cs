@@ -6,6 +6,15 @@ using Rolky.Interop;
 
 namespace Testing
 {
+    public class MyTestObject
+    {
+        public readonly int MyValue;
+
+        public MyTestObject()
+        {
+            MyValue = 50;
+        }
+    }
 
     public class Test
     {
