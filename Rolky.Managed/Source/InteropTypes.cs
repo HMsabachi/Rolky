@@ -12,6 +12,8 @@ namespace Rolky.Interop
         private IntPtr m_NativeArray;
         private int m_NativeLength;
 
+        public int Length => m_NativeLength;
+
         public T[] ToArray<T>() where T : struct
         {
             if (m_NativeArray == IntPtr.Zero || m_NativeLength == 0)
@@ -25,6 +27,15 @@ namespace Rolky.Interop
                 result[i] = Marshal.PtrToStructure<T>(elementPtr);
             }
 
+            return result;
+        }
+        public IntPtr[] ToIntPtrArray()
+        {
+            if (m_NativeArray == IntPtr.Zero || m_NativeLength == 0)
+                return Array.Empty<IntPtr>();
+            IntPtr[] result = new IntPtr[m_NativeLength];
+            for (int i = 0; i < m_NativeLength; i++)
+                result[i] = Marshal.ReadIntPtr(m_NativeArray, i * Marshal.SizeOf<nint>());
             return result;
         }
     }

@@ -34,7 +34,7 @@ int main()
 	hostInstance.AddInternalCall(ROLKY_STR("Rolky.ManagedHost+Dummy, Rolky.Managed"), &Dummy);
 	hostInstance.UploadInternalCalls();
 
-	Rolky::ObjectHandle objectHandle = hostInstance.CreateInstance(ROLKY_STR("Testing.MyTestObject, Testing.Managed"));
+	Rolky::ObjectHandle objectHandle = hostInstance.CreateInstance(ROLKY_STR("Testing.MyTestObject, Testing.Managed"), 50, 100.0f, (const CharType*)ROLKY_STR("Hello, World?"));
 	// hostInstance.CallMethod(objectHandle, "MyInstanceMethod", 5.0f, 10.0f, myOtherObjectHandle);
 	hostInstance.DestroyInstance(objectHandle);
 	return 0;
