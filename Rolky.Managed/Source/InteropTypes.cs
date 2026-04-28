@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Reflection.Metadata.Ecma335;
 using System.Runtime.InteropServices;
 
 namespace Rolky.Interop
 {
+
     [StructLayout(LayoutKind.Sequential)]
     public struct UnmanagedArray
     {
@@ -38,6 +40,19 @@ namespace Rolky.Interop
                 return null;
 
             return Marshal.PtrToStringAuto(m_NativeString);
+        }
+        public static UnmanagedString FromString(string InValue)
+        {
+            return new UnmanagedString()
+            {
+                m_NativeString = Marshal.StringToCoTaskMemAuto(InValue)
+            };
+        }
+
+        [UnmanagedCallersOnly]
+        public static void Free(UnmanagedString InString)
+        {
+            Marshal.FreeCoTaskMem(InString.m_NativeString);
         }
 
         public override bool Equals(object? obj) => obj is UnmanagedString other && Equals(other);
