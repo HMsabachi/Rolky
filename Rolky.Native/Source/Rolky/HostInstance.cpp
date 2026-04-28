@@ -9,7 +9,7 @@ namespace Rolky {
 	hostfxr_get_runtime_delegate_fn GetRuntimeDelegate = nullptr;
 	hostfxr_close_fn CloseHostFXR = nullptr;
 
-	load_assembly_and_get_function_pointer_fn LoadAssembly = nullptr;
+	load_assembly_and_get_function_pointer_fn LoadAssemblyFnptr = nullptr;
 
 	ErrorCallbackFn ErrorCallback = nullptr;	
 
@@ -21,6 +21,19 @@ namespace Rolky {
 
 	using SetInternalCallsFn = void (*)(UnmanagedArray*);
 	SetInternalCallsFn SetInternalCalls = nullptr;
+
+	enum class EAssemblyLoadStatus
+	{
+		Success,
+		FileNotFound,
+		FileLoadFailure,
+		InvalidFilePath,
+		InvalidAssembly,
+		UnknownError
+	};
+
+	using LoadManagedAssemblyFn = EAssemblyLoadStatus (*)(const CharType*);
+	LoadManagedAssemblyFn LoadManagedAssembly = nullptr;
 
 	void DefaultErrorCallback(const CharType* InMessage)
 	{
@@ -58,6 +71,12 @@ namespace Rolky {
 		InitializeRolkyManaged();
 
 		m_Initialized = true;
+	}
+
+	void HostInstance::LoadAssembly(const CharType* InFilePath)
+	{
+		auto status = LoadManagedAssembly(InFilePath);
+		ROLKY_VERIFY(status == EAssemblyLoadStatus::Success);
 	}
 
 	void HostInstance::AddInternalCall(const CharType* InMethodName, void* InFunctionPtr)
@@ -138,14 +157,15 @@ namespace Rolky {
 			auto runtimeConfigPath = std::filesystem::path(m_Settings.RolkyDirectory) / "Rolky.Managed.runtimeconfig.json";
 			int status = InitHostFXRForRuntimeConfig(runtimeConfigPath.c_str(), nullptr, &m_HostFXRContext);
 			ROLKY_VERIFY(status == StatusCode::Success && m_HostFXRContext != nullptr);
-			status = GetRuntimeDelegate(m_HostFXRContext, hdt_load_assembly_and_get_function_pointer, (void**)&LoadAssembly);
-			ROLKY_VERIFY(status == StatusCode::Success && LoadAssembly != nullptr);
+			status = GetRuntimeDelegate(m_HostFXRContext, hdt_load_assembly_and_get_function_pointer, (void**)&LoadAssemblyFnptr);
+			ROLKY_VERIFY(status == StatusCode::Success && LoadAssemblyFnptr != nullptr);
 		}
 
 		using InitializeFn = int (*)(void*);
 		InitializeFn coralManagedEntryPoint = nullptr;
 		coralManagedEntryPoint = LoadRolkyManagedFunctionPtr<InitializeFn>(ROLKY_STR("Rolky.ManagedHost, Rolky.Managed"), ROLKY_STR("Initialize"));
-		
+		LoadManagedAssembly = LoadRolkyManagedFunctionPtr<LoadManagedAssemblyFn>(ROLKY_STR("Rolky.AssemblyLoader, Rolky.Managed"), ROLKY_STR("LoadAssembly"));
+
 		struct DummyData
 		{
 			float x = 10.0f;
@@ -160,7 +180,7 @@ namespace Rolky {
 	void* HostInstance::LoadRolkyManagedFunctionPtr(const std::filesystem::path& InAssemblyPath, const CharType* InTypeName, const CharType* InMethodName, const CharType* InDelegateType) const
 	{
 		void* funcPtr = nullptr;
-		int status = LoadAssembly(InAssemblyPath.c_str(), InTypeName, InMethodName, InDelegateType, nullptr, &funcPtr);
+		int status = LoadAssemblyFnptr(InAssemblyPath.c_str(), InTypeName, InMethodName, InDelegateType, nullptr, &funcPtr);
 		ROLKY_VERIFY(status == StatusCode::Success && funcPtr != nullptr);
 		return funcPtr;
 	}

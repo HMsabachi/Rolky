@@ -26,8 +26,10 @@ int main()
 	Rolky::HostInstance hostInstance;
 	hostInstance.Initialize(settings);
 
-	hostInstance.AddInternalCall(ROLKY_STR("Test1"), &Dummy);
-	hostInstance.AddInternalCall(ROLKY_STR("Test2"), &Dummy);
+	hostInstance.LoadAssembly(ROLKY_STR("E:/PrismEngine/Rolky/Build/Debug/Testing.Managed.dll"));
+
+	hostInstance.AddInternalCall(ROLKY_STR("Rolky.ManagedHost+Dummy, Rolky.Managed"), &Dummy);
+	hostInstance.AddInternalCall(ROLKY_STR("Rolky.ManagedHost+Dummy, Rolky.Managed"), &Dummy);
 	hostInstance.UploadInternalCalls();
 	return 0;
 }

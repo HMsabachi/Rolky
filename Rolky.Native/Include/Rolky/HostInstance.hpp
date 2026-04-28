@@ -21,6 +21,7 @@ namespace Rolky {
 	{
 	public:
 		void Initialize(HostSettings InSettings);
+		void LoadAssembly(const CharType* InFilePath);
 		void AddInternalCall(const CharType* InMethodName, void* InFunctionPtr);
 
 		void UploadInternalCalls();

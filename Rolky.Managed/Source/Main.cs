@@ -4,12 +4,13 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Runtime.Loader;
 
+using Rolky.Interop;
+
 namespace Rolky
 {
 
     public class ManagedHost
     {
-
         [StructLayout(LayoutKind.Sequential)]
         private struct DummyData
         {
@@ -37,8 +38,6 @@ namespace Rolky
                     Console.WriteLine($"\tName: {assembly.FullName}");
                 }
             }
-
-            //Console.WriteLine($"Hello! Arguments Size: {InArgumentsSize}");
             return 0;
         }
 
@@ -53,37 +52,20 @@ namespace Rolky
 
         public delegate void Dummy();
 
-        [StructLayout(LayoutKind.Sequential)]
-        public struct UnmanagedArray
-        {
-            public IntPtr Ptr;
-            public int Length;
-
-            public T[] As<T>() where T : struct
-            {
-                T[] result = new T[Length];
-
-                for (int i = 0; i < Length; i++)
-                {
-                    IntPtr elementPtr = Marshal.ReadIntPtr(Ptr, i * Marshal.SizeOf<nint>());
-                    result[i] = Marshal.PtrToStructure<T>(elementPtr);
-                }
-                return result;
-            }
-        }
 
         [UnmanagedCallersOnly]
         public static void SetInternalCalls(UnmanagedArray InArr)
         {
-            var internalCalls = InArr.As<InternalCall>();
+            var internalCalls = InArr.ToArray<InternalCall>();
 
             Console.WriteLine(internalCalls.Length);
             for (int i = 0; i < internalCalls.Length; i++)
             {
-                Console.WriteLine($"Name = {Marshal.PtrToStringAuto(internalCalls[i].NamePtr)}");
+                Console.WriteLine($"Name = {internalCalls[i].Name}");
 
-                var del = Marshal.GetDelegateForFunctionPointer<Dummy>(internalCalls[i].NativeFunctionPtr);
-                del();
+				var delegateType = Type.GetType(internalCalls[i].Name);
+				var del = Marshal.GetDelegateForFunctionPointer(internalCalls[i].NativeFunctionPtr, delegateType);
+				del.DynamicInvoke();
             }
         }
     }
